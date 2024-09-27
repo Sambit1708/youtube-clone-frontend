@@ -1,1 +1,28 @@
-<p >dashboard works!</p>
+<div [style.padding-bottom]="'36px'">
+    <mat-grid-list cols="3" rowHeight="3:3" gutterSize="16px">
+        <mat-grid-tile *ngFor="let item of thumbnails()">
+            <mat-card>
+                <img mat-card-image [src]="item.thumbnailUrl" alt="R" layout-fill>
+                <mat-card-content >
+                    <div class="text-content-card">
+                        <div style="padding-top: 10px; margin-right: 10px;" >
+                            <img [src]="item.channelProfileUrl" [alt]="'R'" [style.width]="'35px'">
+                        </div>
+                        <div class="card-title">
+                            <p>{{ item.videoTitle }}</p>
+                        </div>
+                        <button mat-icon-button>
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
+                    </div>
+                    <div style="padding-top: 10px; margin-left: 32px;">
+                        <p>{{ item.channelName }}</p>
+                        <div style="display: flex; margin-top: -10px;">
+                            <p>{{item.views}} views</p> &nbsp; &bull; &nbsp; <p>{{ item.video_create_date }} ago</p>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

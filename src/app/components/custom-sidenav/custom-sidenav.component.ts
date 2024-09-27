@@ -42,7 +42,7 @@ export class CustomSidenavComponent {
     {
       icon: "video_library",
       label: "Your Channel",
-      route: "channel"
+      route: "/v/channel"
     },
     {
       icon: "history",
