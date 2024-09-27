@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './views/header/header.component';
+import { FooterComponent } from "./views/footer/footer.component";
+import { MatSidenavModule } from "@angular/material/sidenav"
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, MatSidenavModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
