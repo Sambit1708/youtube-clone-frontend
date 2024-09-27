@@ -1,19 +1,23 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
+import { MatGridListModule } from '@angular/material/grid-list';
 import { ThumbnailDetail } from '../../models';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-channel',
   standalone: true,
-  imports: [MatCardModule, MatGridListModule,MatIconModule, MatButtonModule, CommonModule],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss'
+  imports: [MatCardModule, MatDividerModule, MatTabsModule, MatIconModule, MatButtonModule, MatGridListModule, CommonModule],
+  templateUrl: './channel.component.html',
+  styleUrl: './channel.component.scss'
 })
-export class DashboardComponent {
+export class ChannelComponent {
+
+  logoUrl: string = "assets/user.png";
 
   thumbnails= signal<ThumbnailDetail[]>([
     {
