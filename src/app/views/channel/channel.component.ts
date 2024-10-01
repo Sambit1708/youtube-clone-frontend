@@ -129,4 +129,43 @@ export class ChannelComponent {
       thumbnailUrl: "assets/Thumbnails/12Angular18.png"
     }
   ])
+
+  playlists= signal<ThumbnailDetail[]>([
+    {
+      videoTitle: "Bhool Bhulaiyaa 3 (Teaser): Kartik Aaryan, Vidya Balan, Triptii Dimri | Anees Bazmee | Bhushan Kumar",
+      videoId: "1",
+      channelProfileUrl: "assets/user.png",
+      channelName: "SamSeries",
+      views: 685445,
+      video_create_date: "2023-02-24",
+      thumbnailUrl: "assets/Thumbnails/1bhoolBhulaiyaa.png"
+    },
+    {
+      videoTitle: "Sahara Turns Green: Should we Celebrate or Worry? | Vantage with Palki Sharma",
+      videoId: "2",
+      channelProfileUrl: "assets/user.png",
+      channelName: "SamSeries",
+      views: 1685445,
+      video_create_date: "2024-02-24",
+      thumbnailUrl: "assets/Thumbnails/2shara.png"
+    },
+    {
+      videoTitle: "Maine Pi Rakhi Hai (Song) Tu Jhoothi Main Makkaar: Ranbir Shraddha Pritam Shreya G Divya K Amitabh B",
+      videoId: "3",
+      channelProfileUrl: "assets/user.png",
+      channelName: "SamSeries",
+      views: 685445,
+      video_create_date: "2022-02-24",
+      thumbnailUrl: "assets/Thumbnails/3menePeeRakhiHai.png"
+    },
+    {
+      videoTitle: "Shanks Uses Conqueror's Haki to protect Uta English Dub | One Piece Film Red 2022 (4K)",
+      videoId: "4",
+      channelProfileUrl: "assets/user.png",
+      channelName: "SamSeries",
+      views: 2085445,
+      video_create_date: "2023-02-24",
+      thumbnailUrl: "assets/Thumbnails/4uta.png"
+    }
+  ])
 }

@@ -18,7 +18,7 @@
     <div>
         <mat-tab-group>
             <mat-tab label="Videos">
-                <div [style.padding-bottom]="'36px'">
+                <div style="padding: 2rem 1rem;">
                     <mat-grid-list cols="4" rowHeight="3:3" gutterSize="16px">
                         <mat-grid-tile *ngFor="let item of thumbnails()">
                             <mat-card style="width: 16rem; cursor: pointer;">
@@ -44,7 +44,41 @@
                 </div>
                 
             </mat-tab>
-            <mat-tab label="Playlists"> Playlists1 </mat-tab>
+            <mat-tab label="Playlists">
+                <div style="position: relative; padding: 2rem 1rem;">
+                    <mat-grid-list cols="4" rowHeight="3:3" gutterSize="2rem">
+                        <mat-grid-tile *ngFor="let item of playlists()">
+                            <mat-card style="width: 16rem; cursor: pointer; position: absolute; z-index: 1; margin-top: -7rem;">
+                                <img mat-card-image [src]="'assets/Thumbnails/7OAuth2.png'">
+                                
+                            </mat-card>
+                            <mat-card style="width: 16rem; cursor: pointer; z-index: 2; margin-top: 2rem;">
+                                <img mat-card-image [src]="item.thumbnailUrl">
+                                <div class="playlist-symbol">
+                                    <mat-icon class="playlist-mat-icon">playlist_play</mat-icon>
+                                    <p style="margin-top: 0.8rem;">20 videos</p>
+                                </div>
+                                <mat-card-content >
+                                    <div class="text-content-card">
+                                        <div class="card-title">
+                                            <p>{{ item.videoTitle }}</p>
+                                        </div>
+                                        <button mat-icon-button>
+                                            <mat-icon>more_vert</mat-icon>
+                                        </button>
+                                    </div>
+                                    <div style="padding-top: 8px;">
+                                        <div style="display: flex; font-size: 0.8rem;">
+                                            <p>{{ item.channelName }}</p> &nbsp; &bull; &nbsp; <p>Playlist</p>
+                                        </div>
+                                        <p style="font-size: 0.7rem; margin-top: -0.5rem;">View full playlist</p>
+                                    </div>
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </div>
+            </mat-tab>
         </mat-tab-group>
     </div>
 </mat-card>
