@@ -48,11 +48,7 @@
                 <div style="position: relative; padding: 2rem 1rem;">
                     <mat-grid-list cols="4" rowHeight="3:3" gutterSize="2rem">
                         <mat-grid-tile *ngFor="let item of playlists()">
-                            <mat-card style="width: 16rem; cursor: pointer; position: absolute; z-index: 1; margin-top: -7rem;">
-                                <img mat-card-image [src]="'assets/Thumbnails/7OAuth2.png'">
-                                
-                            </mat-card>
-                            <mat-card style="width: 16rem; cursor: pointer; z-index: 2; margin-top: 2rem;">
+                            <mat-card style="width: 16rem; cursor: pointer;">
                                 <img mat-card-image [src]="item.thumbnailUrl">
                                 <div class="playlist-symbol">
                                     <mat-icon class="playlist-mat-icon">playlist_play</mat-icon>
